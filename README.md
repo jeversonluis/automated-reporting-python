@@ -1,131 +1,129 @@
-# 🚀 Automated Crypto Market Reporting
+# 🚀 Automated API to Google Sheets Reporting (Python)
 
-An end-to-end **automated data pipeline** for collecting, storing, and visualizing cryptocurrency market data using **Python, Google Sheets, and Looker Studio**.
+A reusable **Python automation solution** that integrates external APIs with **Google Sheets** and delivers **automated, scheduled reporting** with zero manual work.
 
-This project demonstrates how to build a lightweight yet production-ready reporting solution that connects data extraction, data storage, and business intelligence visualization.
+This project is designed for businesses that need reliable data automation using Python and Google Workspace.
 
 ---
 
 ## 🧠 Project Overview
 
-The goal of this project is to **automate the monitoring of cryptocurrency market data** and make it easily accessible through an interactive dashboard.
+This project automates the entire workflow of:
+- Collecting data from an external API
+- Processing and formatting the data using Python
+- Storing historical records in Google Sheets
+- Feeding a live dashboard for ongoing analysis
 
-The pipeline:
-- Collects market data from a public API;
-- Stores historical records in Google Sheets;
-- Feeds a dynamic dashboard built in Looker Studio.
-
-This solution can be adapted to many other business use cases that require **scheduled data extraction and reporting**.
-
----
-
-## 📊 Tech Stack
-
-| Tool | Purpose |
-|------|--------|
-| Python | Data extraction and processing |
-| CoinGecko API | Cryptocurrency market data source |
-| Google Sheets API | Data storage and historical tracking |
-| Looker Studio | Interactive dashboards and visual analytics |
-| GitHub Actions | Automated scheduled execution |
+It demonstrates a real-world **API → Python → Google Sheets → Reporting** automation pipeline.
 
 ---
 
-## 🔄 Data Flow Architecture
+## 👥 Who This Project Is For
 
-1. **Data Extraction (Python)**
-   - Connects to the CoinGecko API
-   - Retrieves current market data (prices, market cap, volume, etc.)
-   - Applies basic transformations and formatting
-
-2. **Data Storage (Google Sheets)**
-   - Appends new records daily
-   - Maintains historical data over time
-   - Acts as a centralized data source
-
-3. **Data Visualization (Looker Studio)**
-   - Connects directly to Google Sheets
-   - Displays interactive charts and KPIs
-   - Enables trend analysis and asset comparison
+This solution is ideal for:
+- Businesses that rely on manual data collection
+- Teams using Google Sheets as a lightweight database
+- Clients who need recurring reports (daily, weekly, monthly)
+- Companies looking to integrate Python with Google Workspace
+- Anyone needing API data automatically delivered to Sheets
 
 ---
 
-## 📈 Live Dashboard
+## 💼 Business Value
 
-👉 Access the interactive dashboard here:  
-**Looker Studio – Crypto Market Report**  
+This automation helps businesses:
+
+- ✅ Eliminate repetitive manual work  
+- ✅ Reduce human error  
+- ✅ Ensure consistent and reliable data updates  
+- ✅ Save hours of operational time  
+- ✅ Scale easily to new APIs and spreadsheets  
+
+The workflow can run automatically on a schedule without human intervention.
+
+---
+
+## 🔄 Automation Workflow
+
+1. **API Integration**
+   - Connects to an external API
+   - Fetches structured data in real time
+
+2. **Python Automation**
+   - Cleans and transforms the data
+   - Prepares it for storage and reporting
+
+3. **Google Sheets Integration**
+   - Appends new records automatically
+   - Maintains a historical dataset
+
+4. **Reporting Layer**
+   - Google Sheets acts as a data source
+   - Looker Studio provides live visualization
+
+---
+
+## 📊 Live Dashboard Example
+
+👉 View the live automated report here:  
 https://lookerstudio.google.com/reporting/862122b2-3bdb-496f-b75d-1e6b4e2a1bc0
 
-The dashboard allows users to:
-- Track price evolution over time
-- Compare multiple cryptocurrencies
-- Analyze market capitalization trends
-- Explore historical performance interactively
+This dashboard updates automatically based on data collected by the Python automation.
 
 ---
 
-## ⚙️ Automation
+## ⚙️ Automation & Scheduling
 
-The project is designed to run automatically using **GitHub Actions**, enabling:
-- Scheduled execution (e.g. daily updates)
-- Hands-free data refresh
-- Reliable and repeatable reporting
+The project uses **GitHub Actions** to:
+- Run automatically on a schedule
+- Keep data always up to date
+- Remove the need for manual execution
 
-This approach simulates a real-world automated reporting pipeline used in data teams.
+This setup reflects how production automation workflows are commonly deployed.
+
+---
+
+## 🧩 Tech Stack
+
+- Python (automation & data processing)
+- External API integration
+- Google Sheets API
+- Google Looker Studio
+- GitHub Actions (scheduling)
 
 ---
 
 ## 📁 Repository Structure
 
 automated-reporting-python/
-├── main.py # Main data extraction and loading script
-├── config.py # Configuration and environment variables
-├── requirements.txt # Python dependencies
-├── README.md # Project documentation
-└── .github/
-└── workflows/
-└── daily_run.yml # Scheduled automation workflow
-
-
-> Sensitive credentials are excluded from version control and handled securely.
+├── main.py # Automation logic
+├── config.py # Configuration and credentials
+├── requirements.txt # Dependencies
+├── README.md # Documentation
+└── .github/workflows/
+└── daily_run.yml # Scheduled execution
 
 ---
 
-## 💡 Why This Project Matters
-
-This project demonstrates practical skills in:
-- API integration
-- Data automation and scheduling
-- Simple ETL pipeline design
-- Business Intelligence and dashboarding
-- Cloud-based tools commonly used by data teams
-
-It reflects real-world scenarios where analysts need to **bridge data engineering and analytics**.
 
 ---
 
-## 🎯 Use Cases
+## 🔧 Customization & Reuse
 
-- Market monitoring dashboards  
-- Automated executive reports  
-- Financial or investment tracking  
-- Proof of concept for data automation pipelines  
+This project can be easily adapted to:
+- Other APIs (finance, CRM, marketing, internal systems)
+- Different Google Sheets structures
+- Multiple spreadsheets or clients
+- Other reporting tools
 
----
-
-## 📌 Possible Extensions
-
-Although no changes are required, this project could easily be extended to:
-- Add more assets or APIs
-- Store data in a database instead of Sheets
-- Apply advanced transformations
-- Create alerts based on market conditions
+It serves as a **template for Python-based automation projects**.
 
 ---
 
 ## 👤 Author
 
 **Jeverson Luis S.**  
-Python Automation Specialist | Google Sheets & Workspace Automation | API Integrations | Data Automation Freelancer
+Python Automation Specialist  
+Google Sheets & Google Workspace Automation  
+API Integrations | Data Automation Freelancer
 
-Feel free to explore the repository and dashboard to understand the full workflow.
