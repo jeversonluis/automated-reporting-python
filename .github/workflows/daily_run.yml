@@ -2,7 +2,7 @@ name: Daily Crypto Market Update
 
 on:
   schedule:
-    # Runs once per day at 10:00 AM (UTC-3)
+    # Runs once per day at 10:00 AM (UTC-3 = 13:00 UTC)
     - cron: "0 13 * * *"
   workflow_dispatch:
 
@@ -20,9 +20,11 @@ jobs:
           python-version: "3.11"
 
       - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Create Google credentials file
         run: |
-          pip install -r requirements.txt
+          echo "${{ secrets.GOOGLE_CREDENTIALS }}" > credentials.json
 
       - name: Run data pipeline
-        run: |
-          python main.py
+        run: python main.py
